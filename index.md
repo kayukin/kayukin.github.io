@@ -1,16 +1,18 @@
 # Granatum API
 
 ## Токен
-Все запросы
+Для авторизации необходимо послать токен в заголовлке Authorization
+```
+Authorization: {token}
+```
 
 ## Swagger-UI
 [Swagger-UI](/swagger)
 
 ## Создание нового пользователя
-```json
-> POST https://api.granatum.solutions/integration/register  
-Authorization: token {TOKEN}
 
+> POST https://api.granatum.solutions/integration/register  
+```json
 {
 	"email": ""
 }
