@@ -1,7 +1,7 @@
 # Granatum API
 
 ## Создание нового пользователя
-```http
+```json
 > POST https://api.granatum.solutions/integration/register  
 Authorization: token {TOKEN}
 
