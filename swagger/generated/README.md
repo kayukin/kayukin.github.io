@@ -23,8 +23,11 @@ Class | Method | HTTP request | Description
  - [Course](./\Models/Course.md)
  - [CreateUserRequest](./\Models/CreateUserRequest.md)
  - [CreateUserResponse](./\Models/CreateUserResponse.md)
+ - [Progress](./\Models/Progress.md)
+ - [ProgressSessions](./\Models/ProgressSessions.md)
  - [Role](./\Models/Role.md)
  - [Session](./\Models/Session.md)
+ - [TestResult](./\Models/TestResult.md)
  - [User](./\Models/User.md)
 
 

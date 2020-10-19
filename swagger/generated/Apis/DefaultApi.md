@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="coursesGet"></a>
 # **coursesGet**
-> Course coursesGet()
+> List coursesGet()
 
 Получить список всех курсов
 
@@ -25,7 +25,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Course**](../\Models/Course.md)
+[**List**](../\Models/Course.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List**](../\Models/object.md)
+[**List**](../\Models/Progress.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="coursesIdSessionsGet"></a>
 # **coursesIdSessionsGet**
-> Session coursesIdSessionsGet(id)
+> List coursesIdSessionsGet(id)
 
 Получить список сессий курса
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Session**](../\Models/Session.md)
+[**List**](../\Models/Session.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 <a name="coursesIdUsersGet"></a>
 # **coursesIdUsersGet**
-> User coursesIdUsersGet(id)
+> List coursesIdUsersGet(id)
 
 Получить список пользователей курса
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](../\Models/User.md)
+[**List**](../\Models/User.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List**](../\Models/object.md)
+[**List**](../\Models/TestResult.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 <a name="sessionsIdUsersGet"></a>
 # **sessionsIdUsersGet**
-> User sessionsIdUsersGet(id)
+> List sessionsIdUsersGet(id)
 
 Получить список пользователей сессии
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](../\Models/User.md)
+[**List**](../\Models/User.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 <a name="usersGet"></a>
 # **usersGet**
-> User usersGet()
+> List usersGet()
 
 Получить список всех пользователей
 
@@ -197,7 +197,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**User**](../\Models/User.md)
+[**List**](../\Models/User.md)
 
 ### Authorization
 
