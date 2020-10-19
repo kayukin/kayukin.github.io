@@ -6,195 +6,111 @@
 Authorization: {token}
 ```
 
-## Swagger-UI
+## OpenAPI спецификация
 [Swagger-UI](/swagger)
-
-## Создание нового пользователя
-
-> POST https://api.granatum.solutions/integration/register  
-```json
-{
-	"email": ""
-}
-```
-< 201
-```json
-{
-	"email": "",
-	"password": ""
-}
-```
+[openapi.yaml](/todo)
 
 ## Получить список всех курсов
 
-### Return type
-```http request
-POST api.granatum.solutions
-Authorization: {token}
-Content-Type: application/json
-
-
+#### Ответ
+```json
+[
+  {
+    "email": "string",
+    "externalId": "string",
+    "active": true,
+    "role": "USER"
+  }
+]
 ```
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-# **coursesIdProgressGet**
-> List coursesIdProgressGet(id)
-
-Прогресс пользователей курса
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Id курса | [default to null]
-
-### Return type
-
-[**List**](../\Models/Progress.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-# **coursesIdSessionsGet**
-> List coursesIdSessionsGet(id)
-
-Получить список сессий курса
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Id курса | [default to null]
-
-### Return type
-
-[**List**](../\Models/Session.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-# **coursesIdUsersGet**
-> List coursesIdUsersGet(id)
-
-Получить список пользователей курса
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Id курса | [default to null]
-
-### Return type
-
-[**List**](../\Models/User.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-# **registerPost**
-> CreateUserResponse registerPost(createUserRequest)
-
-Создать новый аккаунт
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createUserRequest** | [**CreateUserRequest**](../\Models/CreateUserRequest.md)|  |
-
-### Return type
-
-[**CreateUserResponse**](../\Models/CreateUserResponse.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-# **sessionsIdResultsGet**
-> List sessionsIdResultsGet(id)
-
-Результаты прохождения тестов в сессии
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Id сессии | [default to null]
-
-### Return type
-
-[**List**](../\Models/TestResult.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-# **sessionsIdUsersGet**
-> List sessionsIdUsersGet(id)
-
-Получить список пользователей сессии
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Id сессии | [default to null]
-
-### Return type
-
-[**List**](../\Models/User.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-# **usersGet**
-> List usersGet()
-
-Получить список всех пользователей
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List**](../\Models/User.md)
-
-
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
+## Прогресс пользователей курса
+
+#### Ответ
+```json
+[
+  {
+    "email": "string",
+    "sessions": [
+      {
+        "id": "string",
+        "name": "string",
+        "averageScore": 0
+      }
+    ]
+  }
+]
+```
+## Получить список сессий курса
+
+#### Ответ
+```json
+[
+  {
+    "id": "string",
+    "name": "string",
+    "description": "string",
+    "courseId": "string",
+    "startDate": "2020-10-19T17:49:45.632Z"
+  }
+]
+```
+## Получить список пользователей курса
+
+#### Ответ
+```json
+[
+  {
+    "email": "string",
+    "externalId": "string",
+    "active": true,
+    "role": "USER"
+  }
+]
+```
+## Создать новый аккаунт
+
+#### Ответ
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+## Результаты прохождения тестов в сессии
+
+#### Ответ
+```json
+[
+  {
+    "email": "string",
+    "attempts": 0,
+    "score": 0
+  }
+]
+```
+## Получить список пользователей сессии
+
+#### Ответ
+```json
+[
+  {
+    "email": "string",
+    "externalId": "string",
+    "active": true,
+    "role": "USER"
+  }
+]
+```
+## Получить список всех пользователей
+
+#### Ответ
+```json
+[
+  {
+    "email": "string",
+    "externalId": "string",
+    "active": true,
+    "role": "USER"
+  }
+]
+```
