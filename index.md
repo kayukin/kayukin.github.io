@@ -13,7 +13,14 @@ Authorization: {token}
 # Авторизация
 
 ## Создать новый аккаунт
-
+#### Запрос
+POST /register
+```json
+{
+  "email": "string",
+  "externalId": "string"
+}
+```
 #### Ответ
 ```json
 {
