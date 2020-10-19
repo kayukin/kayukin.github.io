@@ -40,7 +40,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
   /courses:
     get:
       tags:
@@ -52,7 +54,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Course'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Course'
   /courses/{id}/users:
     get:
       tags:
@@ -71,7 +75,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
   /courses/{id}/sessions:
     get:
       tags:
@@ -90,7 +96,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Session'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
   /courses/{id}/progress:
     get:
       tags:
@@ -109,7 +117,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Progress'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Progress'
   /sessions/{id}/users:
     get:
       tags:
@@ -128,7 +138,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
   /sessions/{id}/results:
     get:
       tags:
@@ -147,7 +159,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TestResults'
+                type: array
+                items:
+                  $ref: '#/components/schemas/TestResult'
 
 components:
   securitySchemes:
@@ -209,37 +223,31 @@ components:
         startDate:
           type: string
           format: date-time
-    TestResults:
-      type: array
-      items:
-        type: object
-        properties:
-          email:
-            type: string
-          attempts:
-            type: number
-          score:
-            type: number
+    TestResult:
+      type: object
+      properties:
+        email:
+          type: string
+        attempts:
+          type: number
+        score:
+          type: number
     Progress:
-      type: array
-      items:
-        type: object
-        properties:
-          email:
-            type: string
-          sessions:
-            type: array
-            items:
-              type: object
-              properties:
-                id:
-                  type: string
-                name:
-                  type: string
-                averageScore:
-                  type: number
-          score:
-            type: number
+      type: object
+      properties:
+        email:
+          type: string
+        sessions:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              averageScore:
+                type: number
 
 security:
   - ApiKeyAuth: [ ]

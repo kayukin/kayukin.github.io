@@ -1,5 +1,11 @@
 # Granatum API
 
+## Токен
+Все запросы
+
+## Swagger-UI
+[Swagger-UI](/swagger)
+
 ## Создание нового пользователя
 ```json
 > POST https://api.granatum.solutions/integration/register  
