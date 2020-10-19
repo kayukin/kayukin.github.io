@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  description: '[Вернуться на главную](/)'
+  description: '<a href="/">Вернуться на главную</a>'
   version: 1.0.0
   title: Granatum API
   contact:
