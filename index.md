@@ -1,7 +1,7 @@
 # Granatum API
 
 ## Токен
-Для авторизации необходимо послать токен в заголовлке Authorization
+Для авторизации необходимо послать токен в заголовке Authorization
 ```
 Authorization: {token}
 ```

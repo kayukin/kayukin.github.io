@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  description: '-'
+  description: '[Вернуться на главную](/)'
   version: 1.0.0
   title: Granatum API
   contact:
