@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  description: '-'
+  version: 1.0.0
+  title: Granatum API
+  contact:
+    email: todo@granatum.solutions
+servers:
+  - url: https://api.granatum.solutions/integration
+paths:
+  /register:
+    post:
+      summary: Создать новый аккаунт
+      description: ''
+      operationId: register
+      requestBody:
+        required: true
+        content:
+          application/json: 
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+      responses:
+        201:
+          description: Пользователь создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: token
+  schemas:
+    User:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+    UserRequest:
+      type: object
+      properties:
+        email:
+          type: string
+security: 
+- ApiKeyAuth: []
