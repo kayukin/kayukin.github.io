@@ -7,8 +7,22 @@ Authorization: {token}
 ```
 
 ## OpenAPI спецификация
-[Swagger-UI](/swagger)
+[Swagger-UI](/swagger)  
 [openapi.yaml](/todo)
+
+# Авторизация
+
+## Создать новый аккаунт
+
+#### Ответ
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+
+# Статистика
 
 ## Получить список всех курсов
 
@@ -66,15 +80,6 @@ Authorization: {token}
     "role": "USER"
   }
 ]
-```
-## Создать новый аккаунт
-
-#### Ответ
-```json
-{
-  "email": "string",
-  "password": "string"
-}
 ```
 ## Результаты прохождения тестов в сессии
 
